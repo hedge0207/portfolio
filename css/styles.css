@@ -6159,6 +6159,26 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
+.bg-custom {
+  background-color: #C0704F !important;
+}
+
+a.bg-custom:hover, a.bg-custom:focus,
+button.bg-custom:hover,
+button.bg-custom:focus {
+  background-color: #c26943 !important;
+}
+
+.bg-custom2 {
+  background-color: #D9B497 !important;
+}
+
+a.bg-custom2:hover, a.bg-custom2:focus,
+button.bg-custom2:hover,
+button.bg-custom2:focus {
+  background-color: #dda87f !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -10159,7 +10179,7 @@ h3 {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(209, 243, 236, 0.877);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
