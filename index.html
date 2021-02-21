@@ -1,705 +1,567 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>차종욱 | 함께 성장하는 신입 개발자</title><style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.highlight-default {
-}
-.highlight-gray {
-	color: rgb(155,154,151);
-}
-.highlight-brown {
-	color: rgb(100,71,58);
-}
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
-}
-.highlight-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-brown_background {
-	background: rgb(233,229,227);
-}
-.highlight-orange_background {
-	background: rgb(250,235,221);
-}
-.highlight-yellow_background {
-	background: rgb(251,243,219);
-}
-.highlight-teal_background {
-	background: rgb(221,237,234);
-}
-.highlight-blue_background {
-	background: rgb(221,235,241);
-}
-.highlight-purple_background {
-	background: rgb(234,228,242);
-}
-.highlight-pink_background {
-	background: rgb(244,223,235);
-}
-.highlight-red_background {
-	background: rgb(251,228,228);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(55, 53, 47, 0.6);
-	fill: rgba(55, 53, 47, 0.6);
-}
-.block-color-brown {
-	color: rgb(100,71,58);
-	fill: rgb(100,71,58);
-}
-.block-color-orange {
-	color: rgb(217,115,13);
-	fill: rgb(217,115,13);
-}
-.block-color-yellow {
-	color: rgb(223,171,1);
-	fill: rgb(223,171,1);
-}
-.block-color-teal {
-	color: rgb(15,123,108);
-	fill: rgb(15,123,108);
-}
-.block-color-blue {
-	color: rgb(11,110,153);
-	fill: rgb(11,110,153);
-}
-.block-color-purple {
-	color: rgb(105,64,165);
-	fill: rgb(105,64,165);
-}
-.block-color-pink {
-	color: rgb(173,26,114);
-	fill: rgb(173,26,114);
-}
-.block-color-red {
-	color: rgb(224,62,62);
-	fill: rgb(224,62,62);
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.block-color-brown_background {
-	background: rgb(233,229,227);
-}
-.block-color-orange_background {
-	background: rgb(250,235,221);
-}
-.block-color-yellow_background {
-	background: rgb(251,243,219);
-}
-.block-color-teal_background {
-	background: rgb(221,237,234);
-}
-.block-color-blue_background {
-	background: rgb(221,235,241);
-}
-.block-color-purple_background {
-	background: rgb(234,228,242);
-}
-.block-color-pink_background {
-	background: rgb(244,223,235);
-}
-.block-color-red_background {
-	background: rgb(251,228,228);
-}
-.select-value-color-default { background-color: rgba(206,205,202,0.5); }
-.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
-.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
-.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
-.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
-.select-value-color-green { background-color: rgba(0,135,107,0.2); }
-.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
-.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
-.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
-.select-value-color-red { background-color: rgba(255,0,26,0.2); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="0ed61cf4-f78b-4808-b5b7-a7645aac161e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👨🏻‍💻</span></div><h1 class="page-title">차종욱 | 함께 성장하는 신입 개발자</h1></header><div class="page-body"><div id="f8f3ef30-d25b-4ca6-befe-13c7b7343146" class="column-list"><div id="e9accdff-8c27-4f7a-8a97-ffb3a719338f" style="width:37.5%" class="column"><figure id="ef867f5f-18e1-42cd-8b61-da4e856079a2" class="image"><a href="%E1%84%8E%E1%85%A1%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%AE%E1%86%A8%20%E1%84%92%E1%85%A1%E1%86%B7%E1%84%81%E1%85%A6%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%89%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%20ef867f5f18e142cd8b61da4e856079a2.jpg"><img style="width:192px" src="%E1%84%8E%E1%85%A1%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%AE%E1%86%A8%20%E1%84%92%E1%85%A1%E1%86%B7%E1%84%81%E1%85%A6%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%89%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%20ef867f5f18e142cd8b61da4e856079a2.jpg"/></a></figure><p id="08cb6ae8-cadb-4f85-8801-9fc952987f3e" class="">
-</p><p id="e7af37ac-43ab-486b-9c21-d17f930fecf5" class="">
-</p></div><div id="1266b3f8-429c-4a7a-bbe7-0d4de0efb79b" style="width:62.5%" class="column"><h3 id="358a4e73-f868-464f-8f1b-c269fe52acca" class="block-color-brown">Contact.</h3><p id="34a44935-5c2f-4ccc-bb89-1e045b0fc556" class="">Email: <strong>hedge0207@gmail.com</strong></p><p id="82dae7fa-b6c8-4458-b8f6-3e5aa9543628" class="">phone: <strong>010-9377-1886</strong></p><p id="b603ed83-160d-4ad7-afd4-7d97acd670f3" class="">
-</p><h3 id="b6dded7e-5f37-4c91-84b3-b58acc65e864" class="block-color-brown">Github &amp; Blog</h3><p id="44af5d5a-9301-42e8-9ac0-2107df232617" class="">Github: <a href="https://github.com/hedge0207">https://github.com/hedge0207</a></p><p id="126942ce-debe-47e1-aa1b-157ef307906d" class="">Blog: <a href="https://hedge0207.github.io/">https://hedge0207.github.io/</a></p><p id="b9dba220-2c1b-4320-abcc-c969cbc9c7d1" class="">
-</p></div></div><hr id="2121c42d-1067-4432-b8e1-fd0ffb2c2870"/><h1 id="f11b5f6d-e992-4eee-9606-fb3bbca5946f" class="block-color-brown">Introduce</h1><p id="64fc1b94-0b4f-435e-aac1-1854ca05673c" class="">&quot;함께 성장하고자 하는 신입개발자 차종욱입니다.&quot;</p><p id="afeb6912-3d2e-4c7a-98b8-0b412a75d0ea" class="">
-</p><p id="d2973bb7-cfe3-4f58-9deb-9077ae74ce79" class=""> 저의 첫 프로젝트는 저를 포함하여 6명이 팀이 되어 진행하였습니다. 다들 첫 프로젝트였던 탓에 모르는 부분이 많았습니다. 그러나 팀원 모두가 부족한 부분을 채우기 위해 열심히 학습하고, 학습한 것들을 서로 공유하면서 서로의 성장에 기여했습니다.</p><p id="afdae462-8ed9-4f93-a456-7c48e19d95f9" class=""> 이후에 첫 프로젝트를 진행했던 팀원들과 다시 팀이 되어 프로젝트를 진행하게 되었습니다. 첫 프로젝트보다 까다로운 프로젝트였음에도 팀원들 모두가 이전보다 성장하여 빠른 속도로 기한 내에 개발을 완료할 수 있었고, 추가 기능도 개발할 수 있었습니다.</p><p id="ef783f66-4365-4d49-8616-c225b63d07ef" class=""> 이러한 경험을 통해서 개인의 성장은 팀원이 성장하는 원동력이 되고, 팀의 성장은 보다 나은 결과물을 만들어 낼 수 있다는 생각을 하게 되었습니다.</p><p id="d474851b-e0f0-49e8-861f-dd5d8a20e0d9" class="">다른 팀원들의 성장의 원동력이 되어 팀원의 성장에 기여하고, 더 나아가 사업의 성장에 기여하는 개발자가 되고자 합니다.</p><p id="334b71a4-ba36-4131-9cf1-6e51100cb93f" class="">
-</p><h1 id="a0834400-8410-4692-8386-bf7a47848892" class="block-color-brown">Project</h1><h3 id="be8ca536-a0da-41e9-86e1-118dd0e00df4" class="">설렘다방</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="026d6dbb-cbe9-4468-aaa6-603ba12a5a40"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">기존의 소개팅 애플리케이션들이 사용자의 외모를 기반으로 매칭이 이루어진다는 점에 주목하여, 외모가 아닌 사용자의 취향과 분위기를 기반으로 매칭이 이루어지는 서비스를 개발하였습니다.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="37ca0724-39bf-47a9-9bef-933787e46435"><div style="font-size:1.5em"><span class="icon">📁</span></div><div style="width:100%">github
-https://github.com/hedge0207/heartfluttercafe</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="418c8856-6279-422a-8c6e-a445e19790a3"><div style="font-size:1.5em"><span class="icon">🎥</span></div><div style="width:100%">소개 영상(시연 영상은 2:16 부터)</div></figure><figure id="75912b1d-a191-4ade-a232-33890798a4c0"><div class="source"><a href="https://youtu.be/sGvswzr2vjw">https://youtu.be/sGvswzr2vjw</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f342685a-504b-401e-957b-a06512f2b9a1"><div style="font-size:1.5em"><span class="icon">🙋‍♂️</span></div><div style="width:100%">팀원: 5명
-
-역할
-Back-end(Spring boot)
-Database(MariaDB)</div></figure><p id="f9b9ac43-9532-4d28-828d-c17c8f3b4655" class="">
-</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="246d68ac-181a-432e-868f-b10a01f368e0"><div style="font-size:1.5em"><span class="icon">💻</span></div><div style="width:100%">직접 개발한 기능
-- Komoran API를 활용한 형태소 분석
-
-- 사용자 기반 협업 필터링을 통해 코사인 유사도가 높은 사용자를 매칭해 주는 기능
-
-- Google STT API를 활용하여 음성 채팅 내용을 텍스트로 변환해 주는 기능
-
-- OpenCV를 활용하여, 화상채팅이 종료된 후 채팅에 참여한 사용자의 표정을 분석해 감정을 피드백해 주는 기능</div></figure><p id="7c0dabfd-9225-43d9-b0f0-a7549cbb95c3" class="">
-</p><p id="2ec4d3d2-0627-456b-bfcc-5ba7349d1949" class="">
-</p><hr id="81b67cba-2c50-46cf-8676-3eebcbf3c27c"/><h3 id="dcdacdfb-23aa-4e5b-9c5f-f605e9ab37d9" class="">Popcorn Angle</h3><p id="68531d60-4fd7-4a8d-a267-1e300ef4cf09" class="">
-</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="873fef9c-6676-419c-be21-e562e67f1089"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">기존 영화 추천 서비스들에서 제공하는 영화 카테고리가 광범위하고, 추천의 종류도 다양하지 않다는 점에 주목하여, 카테고리를 세분화하고, 다양한 추천 기능을 구현한 영화 추천 서비스를 개발하였습니다.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="37f7ebf9-5bf6-46e0-8db3-d6a1a5e2670d"><div style="font-size:1.5em"><span class="icon">🎥</span></div><div style="width:100%">소개 영상</div></figure><figure id="b0773e49-c6e8-40c8-99bb-2c17a398034c"><div class="source"><a href="https://youtu.be/8q19aOrgmfc">https://youtu.be/8q19aOrgmfc</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fa3c9b25-f717-43c1-9f38-5e54d920aa63"><div style="font-size:1.5em"><span class="icon">🙋‍♂️</span></div><div style="width:100%">팀원: 5명
-
-역할
-Back-end(Django)
-Front-end(Vue.js)
-Database(MariaDB)</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0d6f6679-2e0f-4aef-aaf6-4248d3b1ae44"><div style="font-size:1.5em"><span class="icon">💻</span></div><div style="width:100%">직접 개발한 기능
-- 22,000여 개의 영화 데이터 수집
-
-- Google Cloud API를 활용하여, 현재 날씨에 따른 영화 추천 기능 구현
-
-- 사용자 기반 협업 필터링을 사용하여, 사용자와 영화 취향이 유사한 다른 사용자가 높은 평점을 준 영화 추천
-
-- 카테고리를 세분화하여, 사용자가 원하는 영화를 보다 쉽게 선택할 수 있도록 구현</div></figure><p id="80cf09a5-dd24-4147-9e5f-38b5941d3796" class="">
-</p><hr id="4670c58e-d0ee-43d9-aded-8f47106a5dfb"/><h3 id="a755b8bf-a30b-40bb-b0f6-cb05b62cf4bf" class="">Shall We</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="47bedb3b-562c-483b-b115-ba3a85835332"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">배달 수수료, 배송 수수료 등을 지역 주민들과 공동으로 지불하여 수수료 부담을 덜어주기 위한 플랫폼을 개발하였습니다. </div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="100d6009-815b-493c-b055-49ba1e99f36d"><div style="font-size:1.5em"><span class="icon">🎥</span></div><div style="width:100%">소개 영상(0:39 부터)</div></figure><figure id="005f3098-f5e8-41fb-9181-11a629a04a3d"><div class="source"><a href="https://youtu.be/VpSkODIYCjk">https://youtu.be/VpSkODIYCjk</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d9326f11-e780-4637-9f83-04c6b269f9bb"><div style="font-size:1.5em"><span class="icon">🙋‍♂️</span></div><div style="width:100%">팀원: 6명
-
-역할
-Front-end(Vue.js)</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="40539605-8929-4021-bb27-bd7e1fc4043e"><div style="font-size:1.5em"><span class="icon">💻</span></div><div style="width:100%">직접 개발한 기능
-- 공동 구매, 공동 배달, 대량 구매 후 분배 등을 함께 할 사람을 모집하는 게시글의 CRUD
-
-- 악성 사용자를 신고하는 기능과 신고 당한 사용자를 관리하는 기능
-
-- Kakao map API를 활용하여 회원 가입 시 회원의 주소지를 등록하는 기능
-
-- Vuex를 활용하여 중복되는 상태 관리 코드를 제거</div></figure><p id="bbbb5789-cbbe-4ef8-ac85-25e3d752d20c" class="">
-</p><hr id="5cbbd858-36ab-43ff-914a-179a12e2a619"/><h3 id="1dda3e70-a078-4aec-aebd-b2ffbcbe715c" class="">영화조와</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1e7a674e-5b84-48b7-ab09-a3479f216cff"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">높은 평점을 받은 영화들만 소개해주는 영화 추천 서비스를 개발하였습니다.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a687b261-e424-41ca-8c22-f4f8dc07df2b"><div style="font-size:1.5em"><span class="icon">🎥</span></div><div style="width:100%">소개 영상</div></figure><figure id="fdf8cb80-81d0-4acc-a075-796d48e69e79"><div class="source"><a href="https://youtu.be/ZsXxO5-DmZg">https://youtu.be/ZsXxO5-DmZg</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="df70006e-dca9-4985-a164-829231b7b411"><div style="font-size:1.5em"><span class="icon">🙋‍♂️</span></div><div style="width:100%">팀원: 2명
-
-역할
-Back-end(Django)
-Front-end(Vue.js)
-Database(sqlite3)</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="810f4245-5580-4920-a6f4-e40a1cd1e41b"><div style="font-size:1.5em"><span class="icon">💻</span></div><div style="width:100%">직접 개발한 기능
-- 사용자의 기분에 따라 다른 장르의 영화를 추천해주는 기능
-
-- Google Cloud API를 사용하여 Youtube에 등록 된 각 영화의 예고편을 볼 수 있는 기능
-
-- 사용자가 높은 평점을 준 장르의 영화를 추천해주는 기능
-
-- 영화에 대한 평점을 남길 수 있는 기능 구현
-
-- AWS를 활용하여 배포</div></figure><hr id="7970594f-a8ab-420e-bb2f-4ad753e928ee"/><p id="deac34b1-382e-4ec0-a48f-f29e5db1f71c" class="">
-</p><p id="ab40c6f8-f45a-4d6a-a713-b8bc4c1b966e" class="">
-</p><h1 id="26b70d19-c940-4e2e-861c-7bbd18a86eb8" class="block-color-brown">Skills</h1><div id="dd44469a-1730-445e-a254-3913f6cf6f43" class="column-list"><div id="ba2ee6b3-844f-4e70-948a-3fc207eef8de" style="width:6.25%" class="column"><figure id="daef5a35-b9bb-446d-8e63-a6f4922aecb4" class="image"><a href="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"><img style="width:60px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"/></a></figure><p id="74085a0a-c75c-483a-b5d5-93cf5e5b5b98" class="">
-</p><figure id="d2653489-6d7e-4129-aaed-f5849ce7b5e0" class="image"><a href="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"><img style="width:48px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"/></a></figure><p id="8f524c83-1a18-4366-b458-c24049859b54" class="">
-</p><figure id="a75380c4-1255-4fec-9477-0caae2da5be7" class="image"><a href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"/></a></figure><p id="db6b34d4-c120-43e9-be9c-ed2bec1d13e0" class="">
-</p><figure id="c1e62a50-4f91-4cf6-948f-4d66292234b0" class="image"><a href="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"/></a></figure><p id="e11d47e7-9e16-48e8-a2e5-5092118ca3ce" class="">
-</p><figure id="68dbb71a-2123-4f38-969a-1d3e7cd113dd" class="image"><a href="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg"/></a></figure><p id="1e9dafe0-bec5-4d7f-b81b-8f6419a69a71" class="">
-</p><figure id="2a5bacd7-e5c8-431d-babd-d6a33b665fb5" class="image"><a href="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"><img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"/></a></figure><p id="888c7758-82c4-4bee-a46b-113a99cf8f31" class="">
-</p><figure id="5e009993-4a2c-4ae6-b75e-b9a4118848ea" class="image"><a href="https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg"><img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg"/></a></figure><p id="874e4741-d8e9-47d1-995f-5df6779590ca" class="">
-</p></div><div id="0edd5c8c-07f5-4dd9-8e2a-68bf4a9ad736" style="width:93.75000000000003%" class="column"><p id="61b317e5-4ebe-4074-9e90-cefa75e565fd" class="">Python으로 프로그래밍을 시작하였습니다. 파이썬의 기본적인 문법에 대해 알고 있으며, 자료구조 및 알고리즘을 파이썬으로 학습하였습니다.</p><p id="e9afa89e-73fa-4095-8248-4be2fa739502" class="">
-</p><p id="8ed13475-607f-44dc-8407-b8af25f791f6" class="">Java의 기본적인 문법에 대해 알고 있으며, Java를 사용하면서 객체 지향 프로그래밍에 대한 학습을 하였습니다.</p><p id="fd8ac088-e940-464d-b24b-1bc3d9c93b61" class="">
-</p><p id="f4f491ec-98cf-43a7-b470-b3f53c331bad" class="">Javascript의 기본적인 문법에 대해 알고 있으며, 프로젝트를 진행하면서 다양한 library들과 api들을 학습하여 적용하였습니다.</p><p id="b6fbda43-85d1-4fdb-aa32-c6484d1b211e" class="">
-</p><p id="dcdca712-4b5e-4668-94a2-9964805ddeec" class="">모든 협업 프로젝트에서 git을 사용하였으며, 현재도 github을 통하여 TIL을 관리하고 블로그를 운영하고 있습니다.</p><p id="956e3528-2f41-43ae-b1b9-7feeeeffdf7d" class="">
-</p><p id="27549f3f-58f0-49f4-8cf3-ec0c61befb42" class="">django로 웹 개발 학습을 시작하여 연습용 프로젝트를 다수 진행하였습니다. 위에서 소개 드린 프로젝트 중 2번의 프로젝트를 django로 백엔드를 개발하였습니다.</p><p id="63b94902-5b28-45a3-bd8f-20b7261353ac" class="">
-</p><p id="abf453d9-8087-4f94-8143-6855eb1a457f" class="">프로젝트를 진행하면서 학습을 병행하였기에 이론적인 부분에 대한 학습이 부족하다고 생각하여 프로젝트 종료 후 컨테이너, 빈 등 스프링의 기본 개념에 대해 학습하였습니다.</p><p id="2a78cfb3-65ef-4903-a12f-38a3c90d978e" class="">
-</p><p id="e8a82740-e4b8-44ce-b54d-e787d1865d5f" class="">위에서 소개 드린 프로젝트 중 세 번을 Vue.js로 프론트엔드를 개발하였습니다. Mixins, EventBus, Vuex등 다양한 기능을 학습하고 프로젝트에 적용했습니다.</p><p id="8b9807c0-0263-4aad-b177-09fcef0efb71" class="">
-</p></div></div><p id="61a8b202-4342-48d7-bd1a-b97a29089003" class="">
-</p><h1 id="11908b7f-4678-4419-9fe5-fed6fb4f67db" class="block-color-brown">Education</h1><p id="04cd0345-19a0-4d24-a725-8233fdb0949e" class="">🏫 대구대학교 심리학과 졸업(GPA: 4.19/4.5)</p><p id="36d095be-942a-4050-a8cc-bf37953037c7" class="">📘 삼성 청년 소프트웨어 아카데미(SSAFY) 3기 수료</p><p id="b9f897a8-6cf9-43b5-90db-b865b73c8467" class="">📘 개발 블로그: <a href="https://hedge0207.github.io/">https://hedge0207.github.io</a></p><p id="50cb3c71-172d-4de8-8efc-365ff79a44c2" class="">📘 github TIL: <a href="https://github.com/hedge0207/TIL">https://github.com/hedge0207/TIL</a></p><h1 id="936067b1-9b29-4d84-8682-231294c7f8be" class="block-color-brown">Awards</h1><p id="451edf68-6c32-4cb1-9cfa-a3ca6c229e09" class="">🏆 삼성 청년 소프트웨어 아카데미 자율 프로젝트 우수상(설렘 다방)</p><p id="3c97f88a-300b-4e79-8035-d3893b5aca3f" class="">🏆 삼성 청년 소프트웨어 아카데미 UCC 경진대회 전국 4등(설렘 다방)</p><p id="51f4ade9-1e19-4071-87f6-e1ff6ea375cd" class="">🏆 삼성 청년 소프트웨어 아카데미 UCC 경진대회 전국 4등(설렘 다방)</p><p id="7c2f816a-4d17-4e0f-878a-1287786c4672" class="">
-</p></div></article></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>신입 개발자 차종욱</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!--emailjs 시작-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init("user_S0M5wPXBWT2ajtsG3ga0f");
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_qnueh1h', 'template_o6cbflu', this)
+                        .then(function() {
+                            alert("연락 주셔서 감사합니다!")
+                        }, function(error) {
+                            alert("현재 메일 전송이 불가능합니다. 죄송합니다.")
+                        });
+                });
+            }
+        </script>
+        <!--emailjs 끝-->
+
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">이 순간에도 성장 중인 신입 개발자 차종욱</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#education">Education</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <div class="circle">
+                    <img class="masthead-avatar mb-5" src="assets/img/증명사진.jpg" alt="" />
+                </div>
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">이 순간에도 성장 중인 신입 개발자</h1>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">차종욱</p>
+            </div>
+        </header>
+
+        <!--About Section-->
+        <section class="page-section mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div>
+                    <div>
+                        <h5>"안녕하세요. 이 순간에도 성장하는 신입 개발자 차종욱입니다."</h5>
+                        <p>
+                            항상 배운 것을 활용하여 사람들에게 도움을 주는 삶을 살고자 합니다. 
+                            목표한 삶을 어떻게 살 수 있을지에 대해 생각하던 중에, 제가 지금까지 여러 소프트웨어들로부터 받은 도움과 편의에 대해 생각해 보게 되었습니다. 
+                            이제는 편리한 게 당연해진 많은 일이 이전에는 오랜 시간과 노력을 들여야 하는 일들이었다는 생각이 들었고, 저도 사람들이 편리함을 누리는데 보탬이 되고 싶다고 생각했습니다. 
+                            그 순간부터 지금까지 다른 사람에게 도움과 편리를 제공할 수 있는 개발자가 되기 위하여 성장해 왔고 지금도 성장하기 위해서 노력하고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section-->
+        <section class="page-section bg-primary portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" style="height: 250px;" src="assets/img/portfolio/설렘다방.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/쉘위.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/팝콘앵글.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-6 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/영화좋아.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Tech Skills Section-->
+        <section class="page-section mb-0" id="skills">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text">Skiils</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-5 ml-auto">
+                        <p class="lead">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
+                            <p>Python으로 프로그래밍을 시작하였습니다. 파이썬의 기본적인 문법에 대해 알고 있으며, 자료구조 및 알고리즘을 파이썬으로 학습하였습니다.</p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
+                            <p>Java의 기본적인 문법에 대해 알고 있으며, Java를 사용하면서 객체 지향 프로그래밍에 대한 학습을 하였습니다.</p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+                            <p>Javascript의 기본적인 문법에 대해 알고 있으며, 프로젝트를 진행하면서 다양한 library들과 api들을 학습하여 적용하였습니다.</p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+                            <P>모든 협업 프로젝트에서 git을 사용하였으며, 현재도 github을 통하여 TIL을 관리하고 블로그를 운영하고 있습니다.</P>
+                        </p>
+                    </div>
+                    <div class="col-lg-5 mr-auto">
+                        <p class="lead">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" alt="django" width="40" height="40"/>
+                            <p>django로 웹 개발 학습을 시작하여 연습용 프로젝트를 다수 진행하였습니다. 위에서 소개 드린 프로젝트 중 2번의 프로젝트를 django로 백엔드를 개발하였습니다. </p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/>
+                            <p>위에서 소개 드린 프로젝트 중 한 번을 Spring으로 백엔드를 개발하였습니다. 개발을 진행하면서 학습을 병행하였기에, 아직 부족한 부분이 있다고 생각해 채워나가기 위해 노력중입니다.</p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg" alt="vuejs" width="40" height="40"/>
+                            <p>위에서 소개 드린 프로젝트 중 세 번을 Vue.js로 프론트엔드를 개발하였습니다. Mixins, EventBus, Vuex등 다양한 기능을 학습하고 프로젝트에 적용했습니다.</p>
+                        </p>
+                        <p class="lead">
+                            <img src="https://www.vectorlogo.zone/logos/docker/docker-official.svg" alt="vuejs" width="40" height="40"/>
+                            <p>docker의 기본적인 개념과 사용법에 대해 학습하였으며, 프로젝트에 적용해보았고 현재도 공부해가고 있습니다.</p>
+                        </p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section-->
+        <section class="page-section bg-primary text-white mb-0" id="education">
+            <div class="container">
+                <!-- Education Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Education</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Education Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="lead">
+                            삼성 청년 소프트웨어 아카데미 자율 프로젝트 우수상(설렘 다방)
+                        </p>
+                        <p class="lead">
+                            삼성 청년 소프트웨어 아카데미 UCC 경진대회 전국 4등(설렘 다방)
+                        </p>
+                        <p class="lead">
+                            삼성 청년 소프트웨어 아카데미 BEST TEAM 3회 선정(Shall We 2회, 설렘 다방 1회)
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="lead">
+                            대구대학교 심리학과 졸업(GPA: 4.19/4.5)
+                        </p>
+                        <p class="lead">
+                            삼성 청년 소프트웨어 아카데미(SSAFY) 3기 수료
+                        </p>
+                        <p class="lead">
+                            개발 블로그: <a style="color: white;" href="https://hedge0207.github.io">https://hedge0207.github.io</a>
+                        </p>
+                        <p class="lead">
+                            github TIL: <a style="color: white;" href="https://github.com/hedge0207/TIL">https://github.com/hedge0207/TIL</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+
+                <!--emailjs 시작-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form id="contact-form">
+                            <input type="hidden" name="contact_number">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>보내시는 분</label>
+                                    <input class="form-control" type="text" name="name" placeholder="보내시는 분" required="required" data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>회신 받으실 Email</label>
+                                    <input class="form-control" type="email" name="email" placeholder="Email" required="required" data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Message</label>
+                                    <textarea name="message" class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit" value="Send">Send</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <!-- <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br />
+                            Clark, MO 65243
+                        </p>
+                    </div> -->
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-12 mb-12 mb-lg-12">
+                        <h4 class="text-uppercase mb-4">github & blog links</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/hedge0207"><i class="fab fa-fw fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://hedge0207.github.io"><i class="fas fa-book"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <!-- <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © hedge0207.github.io 2020</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3" id="portfolioModal1Label">설렘 다방</h2>
+                                    <h4>취향 및 분위기 기반 사용자 매칭 플랫폼</h4>
+                                    <h5><a href="https://github.com/hedge0207/heartfluttercafe">소스코드 보기</a></h5>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <h5>UCC(시연 영상은 2:16 부터)</h5>
+                                    <iframe id="youtube-player1" width="100%" height="315" src="https://www.youtube.com/embed/sGvswzr2vjw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- Portfolio Modal - Text-->
+                                    <h5 class="mt-4">프로젝트 참여 인원: 5명</h5>
+                                    <h5 class="mt-4">개발 기간: 20.10.12 - 20.11.27</h5>
+                                    <h5 class="mt-4">역할: Back-end, DB (전체 기여도: 25% / Back-end 기여도: 60%)</h5>
+                                    <hr>
+                                    <h5>프로젝트 개요: 외모, 재력, 학벌 등의 외적 요소가 아닌 사용자의 취향에 따른 매칭 플랫폼 개발</h5>
+                                    <hr>
+                                    <h5>기술 스택: Spring boot, React, mariaDB, docker, OpenCV, pandas, Numpy, aws, kakao API, Google Cloud Speech API</h5>
+                                    <hr>
+                                    <h5>직접 개발한 기능</h5>
+                                    <p>사용자가 출제한 문제에서 형태소 분석을 통해 키워드를 추출하는 기능</p>
+                                    <p>추출된 키워드를 기반으로 사용자 기반 협업 필터링을 사용하여 유저 사이의 Cosine Similarity를 분석해 유사도가 높은 유저를 추천해 주는 기능</p>
+                                    <p>kakao API의 Face Detection 기술을 활용하여 얼굴 사진을 올린 것이 맞는지 확인하는 기능</p>
+                                    <p>Google STT api를 활용하여, 음성 채팅 시 사용자의 음성을 텍스트로 변환해 주는 기능</p>
+                                    <p>OpenCV를 활용하여, 블라인드 화상 채팅이 종료 된 후 각 유저의 표정을 분석해 감정을 피드백 해주는 기능</p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3" id="portfolioModal2Label">Shall We</h2>
+                                    <h4>지역 기반 공동 구매 플랫폼</h4>
+                                    <h5><a href="https://github.com/hedge0207/shallwe">소스코드 보기</a></h5>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <h5>UCC(시연 영상은 39초 부터)</h5>
+                                    <iframe iframe id="youtube-player2" width="100%" height="315" src="https://www.youtube.com/embed/VpSkODIYCjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- Portfolio Modal - Text-->
+                                    <h5 class="mt-4">프로젝트 참여 인원: 6명</h5>
+                                    <h5 class="mt-4">개발 기간: 20.07.13 - 20.08.21</h5>
+                                    <h5 class="mt-4">역할: Front-end(전체 기여도: 30% / Front-end 기여도: 60%)</h5>
+                                    <hr>
+                                    <h5>프로젝트 개요: 지역 주민들이 배송비, 배달비를 함께 분담하고, 대량 구매 후 이를 분배 할 수 있는 플랫폼 개발</h5>
+                                    <hr>
+                                    <h5>기술 스택: Spring, Vue.js, mariaDB docker, OpenCV, pandas, Numpy, aws, kakao API</h5>
+                                    <hr>
+                                    <h5>직접 개발한 기능</h5>
+                                    <p>공동 구매, 공동 배달, 대량 구매 후 분배 등을 함께 할 사람을 모집하는 게시글을 등록하는 기능</p>
+                                    <p>등록된 모집 게시글에 참여하는 기능</p>
+                                    <p>악성 사용자를 신고하는 기능과 신고 당한 사용자를 관리하는 기능</p>
+                                    <p>kakao map API를 사용하여 회원 가입시에 회원의 주소가 아닌 가장 가까운 편의점을 주소지로 등록하는 기능</p>
+                                    <p>kakao map API를 사용하여 만날 장소를 지정하는 기능</p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3" id="portfolioModal3Label">Popcorn Angle</h2>
+                                    <h4>빅데이터 기반 영화 추천 서비스</h4>
+                                    <h5><a href="https://github.com/hedge0207/popcornangle">소스코드 보기</a></h5>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <h5>시연 영상</h5>
+                                    <iframe iframe id="youtube-player3" width="100%" height="315" src="https://www.youtube.com/embed/8q19aOrgmfc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- Portfolio Modal - Text-->
+                                    <h5 class="mt-4">프로젝트 참여 인원: 5명</h5>
+                                    <h5 class="mt-4">개발 기간: 20.08.31 - 20.10.08</h5>
+                                    <h5 class="mt-4">역할: Back-end, Front-end(전체 기여도: 60% / Back-end 기여도: 80% / Front-end 기여도: 30%)</h5>
+                                    <hr>
+                                    <h5>프로젝트 개요: 다양한 방식으로 영화를 추천해주는 영화 추천 서비스 개발</h5>
+                                    <hr>
+                                    <h5>기술 스택: Django, Vue.js, mariaDB, docker, pandas, Numpy, Google Cloud API, aws, BeautifulSoup</h5>
+                                    <hr>
+                                    <h5>직접 개발한 기능</h5>
+                                    <p>Google Cloud API를 사용하여 현재 날씨에 따른 영화 추천</p>
+                                    <p>사용자 기반 협업 필터링을 사용, 사용자와 취향이 유사한 다른 사용자가 높은 평점을 준 영화 추천</p>
+                                    <p>사용자가 높은 평점을 준 영화를 연출한 감독, 영화에 출연한 배우의 다른 영화를 추천</p>
+                                    <p>사용자가 높은 평점을 준 장르의 영화를 추천</p>
+                                    <p>각 영화 별 키워드를 등록하여 사용자가 높은 평점을 준 영화의 키워드 기반 추천</p>
+                                    <p>카테고리를 세분화하여 사용자가 원하는 영화를 보다 쉽게 선택할 수 있도록 구현</p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-3" id="portfolioModal4Label">영화보자</h2>
+                                    <h4>고평가를 받은 영화 소개 서비스</h4>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <h5>시연 영상</h5>
+                                    <iframe id="youtube-player4" width="100%" height="315" src="https://www.youtube.com/embed/ZsXxO5-DmZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- Portfolio Modal - Text-->
+                                    <h5 class="mt-4">프로젝트 참여 인원: 2명</h5>
+                                    <h5 class="mt-4">개발 기간: 20.06.10 - 20.06.20</h5>
+                                    <h5 class="mt-4">역할: Back-end, Front-end(전체 기여도: 70% / Back-end 기여도: 100% / Front-end 기여도: 40%)</h5>
+                                    <hr>
+                                    <h5>프로젝트 개요: 고평가를 받은 영화를 소개해주는 서비스 개발</h5>
+                                    <hr>
+                                    <h5>기술 스택: Django, Vue.js, sqlite3, Google Cloud API, aws</h5>
+                                    <hr>
+                                    <h5>직접 개발한 기능</h5>
+                                    <p>사용자의 기분에 따라 다른 장르의 영화 추천</p>
+                                    <p>영화에 대한 리뷰를 남기고 다른 사용자와 감상을 나눌 수 있는 커뮤니티 CRUD 구현</p>
+                                    <p>Google Cloud API를 사용하여 Youtube에 등록 된 각 영화의 예고편을 볼 수 있는 기능 구현</p>
+                                    <p>사용자가 높은 평점을 준 장르의 영화를 추천</p>
+                                    <p>모바일 환경에서도 볼 수 있도록 반응형으로 구현</p>
+                                    <p>영화에 대한 평점을 남길 수 있는 기능 구현</p>
+                                    <p>AWS를 활용하여 배포</p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
